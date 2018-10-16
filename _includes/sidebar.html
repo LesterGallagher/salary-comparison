@@ -1,0 +1,42 @@
+{% assign trans = site.data.values[site.lan] %}
+<div class="sidebar well">
+    <header class="sidebar-header" role="banner">
+        <a href="{{ site.baseurl }}/">
+            <img src="{{ site.baseurl }}/assets/images/icon.png" class="img-circle" />
+        </a>
+    </header>
+    <div class="text-center">
+        {{ site.description }}
+    </div>
+</div>
+
+{% assign postslen = site.posts | size %}
+{% if postlen > 0 %}
+<div class="sidebar well">
+    <ul>
+        {% for post in site.posts limit:5 %}
+        <li><a href="{{ post.url | absolute_url }}">{{ post.title }}</a></li>
+        {% endfor %}
+    </ul>
+</div>
+{% endif %}
+
+<div class="sidebar well">
+    {% include ad-text.html %}
+</div>
+
+<div class="sidebar well">
+    <ul>
+        {% for job in site.data.rootjobs %}
+        <li><a href="{{ '/jobs/' | append: job.slug | absolute_url }}">{{ job.title }} salary?</a></li>
+        {% endfor %}
+    </ul>
+</div>
+
+<div class="sidebar well">
+    {% include links-list.html %}
+</div>
+
+<div class="sidebar well">
+    {% include ad-text.html %}
+</div>

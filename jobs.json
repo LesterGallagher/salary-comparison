@@ -1,0 +1,37 @@
+---
+---
+[
+    {% for job in site.jobs %}
+    {
+        "title": "{{ job.occupation_title }}",
+        "slug": "{{ job.slug }}",
+        "occupation_code": "{{ job.occupation_code }}",
+        "level": "{{ job.level }}",
+        "employment": "{{ job.employment }}",
+        "employment_rse": "{{ job.employment_rse }}",
+        "employment_per_thousand_jobs": "{{ job.employment_per_jobs }}",
+        "median_hourly_wage": "{{ job.median_hourly_wage }}",
+        "mean_hourly_wage": "{{ job.mean_hourly_wage }}",
+        "annual_mean_wage": "{{ job.annual_mean_wage }}",
+        "mean_wage_rse": "{{ job.mean_wage_rse }}",
+        "level": "{{ job.level }}",
+        "url": "{{ job.url | absolute_url }}",
+        "parents": [
+            {% for parent in job.parents %}{
+                "url": "{{ '/job' | append: parent.slug | absolute_url }}",
+                "slug": "{{ parent.slug }}",
+                "title": "{{ parent.title }}"
+            }{% unless forloop.last %},{% endunless %}
+            {% endfor %}
+        ],
+        "children": [
+            {% for child in job.children %}{
+                "url": "{{ '/job' | append: child.slug | absolute_url }}",
+                "slug": "{{ child.slug }}",
+                "title": "{{ child.title }}"
+            }{% unless forloop.last %},{% endunless %}
+            {% endfor %}
+        ]
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+]

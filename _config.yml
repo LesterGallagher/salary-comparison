@@ -1,0 +1,38 @@
+# Jekyll configuration
+
+name: Salary Comparison
+description: Find out the average salary for almost every job in the world. Get financial and statistical information for free. 
+  Want to know how much someone makes? Find out with Salary Comparison.
+dribbble_username: es_studio
+facebook_username: ES-Studio-2052606714783317
+flickr_username: es_studio
+github_username: LesterGallagher
+instagram_username: 
+linkedin_username: 
+pinterest_username: eestudio0040
+twitter_username: esstudio_site
+youtube_username: 9Wereld
+disqus_username: https://disqus.com/by/echosierrastudio/
+date_format: 
+  title: "%B-%-d-%Y"
+  archive: "%b"
+  categories: "%b-%Y"
+  tag: "%b-%Y"
+  lan: "en" 
+collections:
+  jobs:
+    output: true
+    permalink: /:collection/:slug
+defaults:
+  - scope:
+      path: ''
+      type: jobs
+    values:
+      layout: job
+paginate: 10
+highlighter: rouge
+markdown: kramdown
+plugins: 
+  - 'jekyll-paginate'
+  - 'jekyll-seo-tag'
+  - 'jekyll-feed'

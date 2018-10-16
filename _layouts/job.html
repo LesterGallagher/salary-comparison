@@ -1,0 +1,114 @@
+---
+layout: default
+---
+<div class="well job">
+    {% if page.parent %}
+    <a href="{{ '/jobs/' | append: page.parent.slug | absolute_url }}">&larr; Back to "{{ page.parent.title }}" salary</a>
+    {% endif %}
+
+    {% if page.parents %}
+    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-3 pull-right">
+        <h4>Categories</h4>
+        <ul>
+            {% for parent in page.parents %}
+            <li><a href="{{ '/jobs/' | append: parent.slug | absolute_url }}">
+                <h5>{{ parent.title }}</h5>
+            </a></li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+
+    <h2>How much do "{{ page.occupation_title }}" make?</h2>
+
+    {% assign employment_per_jobs = page.employment_per_jobs | times: 1 %}
+    {{ employment_per_jobs }}
+
+    <p>{{ page.occupation_title }} make about {{ page.annual_mean_wage }} annually. The hourly wage is about {{
+        page.mean_hourly_wage }}.
+        In the united states, the employment rate of {{ page.occupation_title }} is about {{ page.employment_per_jobs
+        }} per thousand,
+        with a total of {{ page.employment }}, {{ page.occupation_title }}.
+        {% if employment_per_jobs < 1 %} There are not a lot of {{ page.occupation_title }} employed in the united
+            states. {% elsif employment_per_jobs < 5 %} Check out the more info about {{ page.occupation_title }}
+            salary below. {% elsif employment_per_jobs < 10 %} {{ page.occupation_title }} is quite a common
+            occupation. <a href="https://click.linksynergy.com/fs-bin/click?id=gX56itLGvIE&offerid=579862.416&type=3&subid=0">Looking
+            for courses?</a>
+            {% else %}
+            {{ page.occupation_title }} is very common.
+            {% endif %}
+    </p>
+    <p>
+        <a href="https://click.linksynergy.com/fs-bin/click?id=gX56itLGvIE&offerid=579862.416&type=3&subid=0">Start
+            your {{ page.occupation_title }} education</a>
+    </p>
+
+    {% include ad.html %}
+
+    <h4>{{ page.occupation_title }}</h4>
+    <ul>
+        <li>Hourly wage: {{ page.mean_hourly_wage }}</li>
+        <li>Annual wage: {{ page.annual_mean_wage }}</li>
+        <li>Employment per thousand jobs: {{ page.employment_per_jobs }}</li>
+        <li>Employment in the United States: {{ page.employment }}</li>
+        <li>Occupation code: {{ page.occupation_code }}</li>
+    </ul>
+
+    {% if page.children %}
+    {% for child in page.children %}
+    <a href="{{ '/jobs/' | append: child.slug | absolute_url }}"><b>{{ child.title }}</b></a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;Hourly wage: {{ page.mean_hourly_wage }}<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;Employment per thousand jobs: {{ page.employment_per_jobs }}
+    <br>
+    {% endfor %}
+    {% endif %}
+    <br><br>
+
+    <p>
+        <a href="https://click.linksynergy.com/fs-bin/click?id=gX56itLGvIE&offerid=145238.10000203&type=3&subid=0">Great
+            eBooks for learning</a><img border="0" width="1" alt="" height="1" src="https://ad.linksynergy.com/fs-bin/show?id=gX56itLGvIE&bids=145238.10000203&type=3&subid=0"><br>
+        <a href="https://click.linksynergy.com/fs-bin/click?id=gX56itLGvIE&offerid=579862.416&type=3&subid=0">50% off
+            Learn Subscription was $14.99 now $7.49 Use Code LSOFF50</a><img border="0" width="1" alt="" height="1" src="https://ad.linksynergy.com/fs-bin/show?id=gX56itLGvIE&bids=579862.416&type=3&subid=0">
+    </p>
+
+</div>
+<div class="pagination">
+    {% if page.previous %}
+    <a class="btn btn-default" href="{{ site.baseurl}}{{ page.previous.url }}" class="previous">&larr; Previous</a>
+    {% endif %}
+    {% if page.next %}
+    <a class="btn btn-default" href="{{ site.baseurl}}{{ page.next.url }}" class="next">&rarr; Next</a>
+    {% endif %}
+</div>
+
+{% comment %}
+"title": "{{ page.occupation_title }}",
+"slug": "{{ page.slug }}",
+"occupation_code": "{{ page.occupation_code }}",
+"level": "{{ page.level }}",
+"employment": "{{ page.employment }}",
+"employment_rse": "{{ page.employment_rse }}",
+"employment_per_thousand_jobs": "{{ page.employment_per_jobs }}",
+"median_hourly_wage": "{{ page.median_hourly_wage }}",
+"mean_hourly_wage": "{{ page.mean_hourly_wage }}",
+"annual_mean_wage": "{{ page.annual_mean_wage }}",
+"mean_wage_rse": "{{ page.mean_wage_rse }}",
+"level": "{{ page.level }}",
+"url": "{{ page.url | absolute_url }}",
+"parents": [
+{% for parent in page.parents %}{
+"url": "{{ '/job/' | append: parent.slug | absolute_url }}",
+"slug": "{{ parent.slug }}",
+"title": "{{ parent.title }}"
+}{% unless forloop.last %},{% endunless %}
+{% endfor %}
+],
+"children": [
+{% for child in page.children %}{
+"url": "{{ '/job/' | append: child.slug | absolute_url }}",
+"slug": "{{ child.slug }}",
+"title": "{{ child.title }}"
+}{% unless forloop.last %},{% endunless %}
+{% endfor %}
+]
+{% endcomment %}
