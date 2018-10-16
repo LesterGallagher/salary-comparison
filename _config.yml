@@ -13,6 +13,8 @@ pinterest_username: eestudio0040
 twitter_username: esstudio_site
 youtube_username: 9Wereld
 disqus_username: https://disqus.com/by/echosierrastudio/
+url: https://salary-comparison.esstudio.site
+enforce_ssl: salary-comparison.esstudio.site
 date_format: 
   title: "%B-%-d-%Y"
   archive: "%b"
