@@ -21,11 +21,11 @@
 </div>
 {% endif %}
 
-<div class="sidebar well">
+<div class="sidebar well" style="padding:0">
     {% include ad-text.html %}
 </div>
 
-<div class="sidebar well" style="padding:0">
+<div class="sidebar well">
     <ul>
         {% for job in site.data.rootjobs %}
         <li><a href="{{ '/jobs/' | append: job.slug | absolute_url }}">{{ job.title }} salary?</a></li>

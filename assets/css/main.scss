@@ -1,11 +1,24 @@
----
-# Only the main Sass file needs front matter (the dashes are enough)
----
-
-@import "xixia";
-
+--- # Only the main Sass file needs front matter (the dashes are enough) --- @import "xixia";
 /* Bootstrap Treeview */
-.treeview .list-group-item{cursor:pointer}.treeview span.indent{margin-left:10px;margin-right:10px}.treeview span.icon{width:12px;margin-right:5px}.treeview .node-disabled{color:silver;cursor:not-allowed}
+
+.treeview .list-group-item {
+    cursor: pointer
+}
+
+.treeview span.indent {
+    margin-left: 10px;
+    margin-right: 10px
+}
+
+.treeview span.icon {
+    width: 12px;
+    margin-right: 5px
+}
+
+.treeview .node-disabled {
+    color: silver;
+    cursor: not-allowed
+}
 
 a[data-toggle=collapse]::after {
     content: "+";
@@ -29,3 +42,12 @@ a[data-toggle=collapse][aria-expanded=true]::after {
     margin: 2px 0;
 }
 
+.my-10 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.my-5 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
