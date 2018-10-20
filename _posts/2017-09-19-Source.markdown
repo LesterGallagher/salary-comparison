@@ -6,7 +6,7 @@ description: We use data from the Bureau of Labor Statistics. The data from May 
 
 We use data from the Bureau of Labor Statistics. The data from May 2017 and are the national Occupational Employment and Wage Estimates.
 
-You can view the source [here](https://www.bls.gov/oes/current/oes_nat.htm)
+You can view the source [here.](https://www.bls.gov/oes/current/oes_nat.htm)
 
 The data is also downloadable as an excel file, which you <a href="https://www.bls.gov/oes/special.requests/oesm17nat.zip" download>download by clicking this link.</a>
 
