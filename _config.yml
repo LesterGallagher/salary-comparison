@@ -34,6 +34,7 @@ defaults:
 paginate: 10
 highlighter: rouge
 markdown: kramdown
+google_analytics: UA-90014538-21
 sass:
     sass_dir: _sass
     style: compressed

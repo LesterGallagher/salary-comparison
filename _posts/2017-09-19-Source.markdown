@@ -1,0 +1,15 @@
+---
+layout: post
+title: What is our source?
+description: We use data from the Bureau of Labor Statistics. The data from May 2017 and are the national Occupational Employment and Wage Estimates.
+---
+
+We use data from the Bureau of Labor Statistics. The data from May 2017 and are the national Occupational Employment and Wage Estimates.
+
+You can view the source [here](https://www.bls.gov/oes/current/oes_nat.htm)
+
+The data is also downloadable as an excel file, which you <a href="https://www.bls.gov/oes/special.requests/oesm17nat.zip" download>download by clicking this link.</a>
+
+The Occupational Employment Statistics (OES) survey is a semiannual survey measuring occupational employment and wage rates for wage and salary workers in nonfarm establishments in the United States.
+
+The OES survey categorizes workers into 810 detailed occupations based on the Office of Management and Budget’s 2010 Standard Occupational Classification (SOC) system. Together, these detailed occupations make up 22 of the 23 SOC major occupational groups. Major group 55, Military Specific Occupations, is not included.
