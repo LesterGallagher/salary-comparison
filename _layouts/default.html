@@ -3,11 +3,11 @@
 <div class="wrap">
     <div class="container container-left">
         <div class="row">
-            <div class="col-md-3 hidden-xs">
-                {% include sidebar.html %}
-            </div>
-            <div class="col-md-9">
+            <div class="col-md-9 col-xs-12 pull-right">
                 {{ content }}
+            </div>
+            <div class="col-md-3 col-xs-12 pull-left">
+                {% include sidebar.html %}
             </div>
         </div>
     </div>

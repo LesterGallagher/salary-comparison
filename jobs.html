@@ -7,15 +7,15 @@ layout: default
     <ul>
         {% for major in site.data.jobstree %}
         <li>
-            <h5>{% if major.children %}<a href="#{{ major.occupation_slug }}-children" data-toggle="collapse"></a> {% endif %}<a target="_blank" href="{{ '/jobs/' | append: major.occupation_slug | absolute_url }}">{{ major.occupation_title }}</a></h5>
+            <h5>{% if major.children %}<a href="#{{ major.occupation_slug }}-children" data-toggle="collapse"></a> {% endif %}<a href="{{ '/jobs/' | append: major.occupation_slug | absolute_url }}">{{ major.occupation_title }}</a></h5>
             <ul{% if major.children %} id="{{ major.occupation_slug }}-children" class="collapse"{% endif %}>
                 {% for minor in major.children %}
                 <li>
-                    <h5>{% if minor.children %}<a href="#{{ minor.occupation_slug }}-children" data-toggle="collapse"></a> {% endif %}<a target="_blank" href="{{ '/jobs/' | append: minor.occupation_slug | absolute_url }}">{{ minor.occupation_title }}</a></h5>
+                    <h5>{% if minor.children %}<a href="#{{ minor.occupation_slug }}-children" data-toggle="collapse"></a> {% endif %}<a href="{{ '/jobs/' | append: minor.occupation_slug | absolute_url }}">{{ minor.occupation_title }}</a></h5>
                     <ul{% if minor.children %} id="{{ minor.occupation_slug }}-children" class="collapse"{% endif %}>
                         {% for broad in minor.children %}
                         <li>
-                            <h5>{% if broad.children %}<a href="#{{ broad.occupation_slug }}-children" data-toggle="collapse"></a> {% endif %}<a target="_blank" href="{{ '/jobs/' | append: broad.occupation_slug | absolute_url }}">{{ broad.occupation_title }}</a></h5>
+                            <h5>{% if broad.children %}<a href="#{{ broad.occupation_slug }}-children" data-toggle="collapse"></a> {% endif %}<a href="{{ '/jobs/' | append: broad.occupation_slug | absolute_url }}">{{ broad.occupation_title }}</a></h5>
                             <ul{% if broad.children %} id="{{ broad.occupation_slug }}-children" class="collapse"{% endif %}>
                                 {% for detail in broad.children %}
                                 <li>

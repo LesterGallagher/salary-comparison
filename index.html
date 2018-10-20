@@ -30,8 +30,8 @@ layout: default
 </div>
 {% endfor %}
 
-{% assign jobs_list = site.jobs | where: "level", "detail" | limit: 40 %}
-{% for job in jobs_list %}
+{% assign jobs_list = site.jobs | where: "level", "detail" %}
+{% for job in jobs_list limit: 40 %}
 <div class="well article">
     <h2>
         <a href="{{ '/jobs/' | append: job.slug | absolute_url }}">{{ job.title }}</a>

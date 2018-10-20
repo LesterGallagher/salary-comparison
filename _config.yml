@@ -34,6 +34,9 @@ defaults:
 paginate: 10
 highlighter: rouge
 markdown: kramdown
+sass:
+    sass_dir: _sass
+    style: compressed
 plugins: 
   - 'jekyll-paginate'
   - 'jekyll-seo-tag'
